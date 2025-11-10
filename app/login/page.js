@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import React, { useEffect, useState } from "react";
 
 const Page = () => {
@@ -55,6 +57,7 @@ const Page = () => {
   };
 
   return (
+    <>
     <div className="relative w-full h-screen overflow-hidden flex items-center justify-center text-center">
       {/* Title */}
       <h1 className="text-white text-4xl font-semibold absolute top-10 left-1/2 transform -translate-x-1/2">
@@ -93,11 +96,41 @@ const Page = () => {
 
       {/* Message popup */}
       {message && (
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-white/90 text-black font-semibold px-6 py-2 rounded-full shadow-lg animate-bounce">
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 bg-white/90 text-black font-semibold px-6 py-2 rounded-full shadow-lg animate-bounce">
           {message}
         </div>
       )}
     </div>
+    <div className="min-h-screen"></div>
+    <div className="min-h-screen"></div>
+    <div className="min-h-screen"></div>
+    <div className="min-h-screen"></div>
+    <div className="min-h-screen"></div>
+    <div className="min-h-screen"></div>
+    <div className="min-h-screen"></div>
+    <div className="min-h-screen"></div>
+    <div className="min-h-screen"></div>
+    <div className="min-h-screen"></div>
+    <div className="min-h-screen"></div>
+    <div className="min-h-screen"></div>
+    <div className="min-h-screen"></div>
+    <div className="min-h-screen"></div>
+     <div className="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center text-center gap-6 ">
+        <h2 className="text-2xl font-semibold">Nothing here</h2>
+        <div className="flex gap-6 mt-4">
+          <Link href="/">
+            <Button className="bg-gray-800 hover:bg-gray-700 text-white font-semibold px-8 py-4 rounded-full border border-gray-600 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:scale-105 transition-all">
+              Back
+            </Button>
+          </Link>
+          <Link href="https://youtu.be/dQw4w9WgXcQ?si=ZGlt4XpFshXnlvcr">
+            <Button className="bg-gray-800 hover:bg-gray-700 text-white font-semibold px-8 py-4 rounded-full border border-gray-600 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:scale-105 transition-all">
+              Next
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </>
   );
 };
 
